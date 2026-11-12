@@ -1,8 +1,18 @@
+
 # Python
 __pycache__/
 *.pyc
 env/
+venv/
+.venv/
+
+# Django
 db.sqlite3
+
+# Environment variables
+.env
+.env.*
+!.env.example
 
 # Node
 node_modules/
@@ -13,3 +23,4 @@ dist/
 
 # OS
 .DS_Store
+Thumbs.db

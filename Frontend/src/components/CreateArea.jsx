@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import { Fab } from "@mui/material";
 import { Zoom } from "@mui/material";
+import { toast } from "react-toastify";
 
 function CreateArea(props) {
   const [isExpanded, setExpanded] = useState(false);
@@ -23,31 +24,25 @@ function CreateArea(props) {
   }
 
 function submitNote(event) {
-  // console.log("BUTTON CLICKED");  
-  console.log("Sending note:",  props.editNote);
+  event.preventDefault();
 
-  if (props.editNote) {
-  props.onUpdate(note);
-} else {
+  if (note.title.trim() === "") {
+    toast.error("Title is required!");
+    return;
+  }
+
+  if (note.content.trim() === "") {
+    toast.error("Content is required!");
+    return;
+  }
+
   props.onAdd(note);
-}
 
   setNote({
     title: "",
     content: "",
   });
-
-  event.preventDefault();
 }
-
-useEffect(() => {
-  if (props.editNote) {
-    setNote({
-      title: props.editNote.title,
-      content: props.editNote.content,
-    });
-  }
-}, [props.editNote]);
 
   function expand() {
     setExpanded(true);
