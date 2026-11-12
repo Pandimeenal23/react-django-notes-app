@@ -5,13 +5,13 @@ Keeper is a full-stack web application that allows users to create, manage, edit
 ## Screenshots
 
 ### Login Page
-![Login Page](screenshots/login.png)
+![Login Page](Screenshots/login.png)
 
 ### Notes Dashboard
-![Notes Dashboard](screenshots/notes.png)
+![Notes Dashboard](Screenshots/notes.png)
 
 ### Edit Note
-![Edit Note](screenshots/edit-modal.png)
+![Edit Note](Screenshots/edit-modal.png)
 
 ## Features
 
